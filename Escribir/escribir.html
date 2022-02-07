@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <span class="a1">
+        !Hola Mundo! 
+    </span>
+    
+</body>
+
+<style>
+
+.a1{
+
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right:  2px solid;
+    width: 13ch;
+    animation: typing 2s steps(13) infinite alternate, blink .5s infinite step-end alternate;
+    overflow: hidden;
+    font-size: 20px;
+    color: #1F1F1F;
+    font-weight: bold;
+}
+
+
+@keyframes typing {
+    from { width: 0; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent;}
+}
+</style>
+</html>

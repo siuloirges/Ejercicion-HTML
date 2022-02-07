@@ -1,0 +1,134 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* min-height: 100vh; */
+    background-color: #1e2759;
+    
+}
+
+ul
+{
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 100px 100px 0px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0 , 0.2);
+    
+
+
+
+    
+}
+
+ul li
+{
+   list-style: none;
+   border-radius: 100px;
+   
+
+}
+
+ul li a
+{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px 30px;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+   
+
+}
+
+
+ul li:nth-child(5) a
+{
+  
+   border-top-right-radius: 100px;
+   border-bottom-right-radius: 100px;
+   
+}
+
+
+ul li a ion-icon
+{
+    font-size: 2.5em;
+    pointer-events: none;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+ul li:hover a ion-icon
+{
+    transform: scale(1.15) translateY(-5px);
+    opacity: 1;
+}
+ul li.active a ion-icon
+{
+
+    opacity: 1;
+}
+
+#marker
+{
+
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+    z-index: 1;
+
+}
+
+#marker::before
+{
+
+    content: '';
+    border-radius: 100px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+   
+
+}
+
+ul li:nth-child(1).active ~ #marker::before
+{
+    background: linear-gradient(white,#5da6ff);
+    box-shadow:  0 0 12px #5da6ff, 0 0 30px #5da6ff, 0 0 45px #5da6ff, 0 0 60px #5da6ff;
+}
+ul li:nth-child(2).active ~ #marker::before
+{
+    background: linear-gradient(white,#ff0);
+    box-shadow:  0 0 12px #ff0, 0 0 30px #ff0, 0 0 45px #ff0, 0 0 60px #ff0;
+}
+ul li:nth-child(3).active ~ #marker::before
+{
+    background: linear-gradient(white,#0f0);
+    box-shadow:  0 0 12px #0f0, 0 0 30px #0f0, 0 0 45px #0f0, 0 0 60px #0f0;
+}
+ul li:nth-child(4).active ~ #marker::before
+{
+    background: linear-gradient(white,#df2fff);
+    box-shadow:  0 0 12px #df2fff, 0 0 30px #df2fff, 0 0 45px #df2fff, 0 0 60px #df2fff;
+}
+ul li:nth-child(5).active ~ #marker::before
+{
+    background: linear-gradient(white,#ff308f);
+    box-shadow:  0 0 12px #ff308f, 0 0 30px #ff308f, 0 0 45px #ff308f, 0 0 60px #ff308f;
+}

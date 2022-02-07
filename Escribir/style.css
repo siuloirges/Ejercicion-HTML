@@ -1,0 +1,23 @@
+
+.a1{
+
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right:  2px solid;
+    width: 13ch;
+    animation: typing 2s steps(13) infinite alternate, blink .5s infinite step-end alternate;
+    overflow: hidden;
+    font-size: 20px;
+    color: #1F1F1F;
+    font-weight: bold;
+}
+
+
+@keyframes typing {
+    from { width: 0; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent;}
+}

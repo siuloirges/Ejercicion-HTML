@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#68a4ff,#9fdfff,#f8f4ff);
+}
+
+.clock
+{
+
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(clock.png);
+    background-size: cover;
+    border-radius: 50%;
+    border: 20px solid #fff;
+    background-color: #fff;
+    box-shadow: 
+    
+    inset 0 0 30px rgba(0,0,0,0.1),
+     0 20px 20px rgba(0, 0, 0, .2),
+     0 0 0 4px rgba(255, 255, 255, 1) ;
+     
+    transform: scale(.45);
+}
+
+.clock::before
+{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #838283;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec
+{
+    position: absolute;
+}
+
+.clock .hour, .hr
+{
+    width: 160px;
+    height: 160px;
+}
+
+.clock .min, .mn
+{
+    width: 190px;
+    height: 190px;
+}
+
+.clock .sec, .sc
+{
+    width: 230px;
+    height: 230px;
+}
+
+.hr, .mn, .sc
+{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+
+}
+
+.hr::before
+{
+    content: '';
+    position: absolute;
+    width:8px;
+    height: 80px;
+    background-color: #838283;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+    box-shadow:  2.5px 2.5px 3.5px rgba(0,0,0,.2) ,
+    0 20px 20px rgba(0, 0, 0, .2);
+}
+
+.mn::before
+{
+    content: '';
+    position: absolute;
+    width:4px;
+    height: 90px;
+    background-color: #D6D5D6;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+    box-shadow:  2.5px 2.5px 3.5px rgba(0,0,0,.2) ,
+    0 20px 20px rgba(0, 0, 0, .2);
+    
+}
+
+
+.sc::before
+{
+    content: '';
+    position: absolute;
+    width:2px;
+    height: 150px;
+    background-color: #FF7E86;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+    box-shadow:  2.5px 2.5px 3.5px rgba(0,0,0,.2) ,
+    0 20px 20px rgba(0, 0, 0, .2);
+   
+
+}
+
+.clock:hover
+{
+    transform-style: preserve-3d ;
+    transform: perspective(1000px); 
+    transform: scale(.43);
+    box-shadow:      
+    inset 0 0 30px rgba(0,0,0,0.1),
+    0 10px 3px rgba(0, 0, 0, .2),
+    0 0 0 4px rgba(255, 255, 255, 1) ;
+}
+
+
+
+*{
+    transition: .1s;
+}
+

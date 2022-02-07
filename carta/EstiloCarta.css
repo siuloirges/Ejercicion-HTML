@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #09383e;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    transform-style: preserve-3d;
+    /* perspective: 900px; */
+    transform: perspective(1500px);
+    transition: 1s;
+    box-shadow: inset 300px 0 59px rgba(0, 0, 0, .15),0 20px 20px rgba(0, 0, 0, .15);
+    border-radius: 0 20px 20px 0;
+
+}
+
+.card:hover{
+    transform: perspective(1500px) translateX(50%);
+    box-shadow: inset 20px 0 59px rgba(0, 0, 0, .40),0 0 0 rgba(0, 0, 0, .40);
+}
+
+.card .cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    transform-origin: left;
+    border-radius: 0 20px 20px 0;
+}
+
+
+
+
+
+.card .cover img{
+    max-width: 100%;
+    z-index: 2;
+}
+
+.card .cover::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 150%;
+    background: #fff;
+    transform: rotate(36.5deg);
+    box-shadow: 0 0 0 20px #47bfce;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.card:hover .cover::before{
+    width: 0;
+    box-shadow: 0 0 0 250px #47bfce;
+    transform: rotateY(143.5deg);
+}
+
+.card:hover .cover{
+   transform: rotateY(-180deg);
+}
+
+
+.card .details img{
+    width: 159px;
+    height: 214px;
+}
+
+.card .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+
+}
+
+.card .details h3{
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.card .details h2{
+
+    font-size: 1.5em;
+    color: #e82a5b;
+    font-weight: 600;
+}
+
+.card .details a{
+    display: inline-block;
+    padding: 8px 20px;
+    background: #47bfce;
+    color: #fff;
+    margin-top: 5px;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    text-decoration: none;
+}
