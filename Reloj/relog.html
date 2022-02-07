@@ -30,6 +30,8 @@
     <script>
         
 
+        new Audio("reloj.mp3").play();
+        
         const deg = 6;
         const hr = document.querySelector('#hr');
         const mn = document.querySelector('#mn');
@@ -48,7 +50,9 @@
             mn.style.transform = `rotateZ(${mm}deg)`;
             sc.style.transform = `rotateZ(${ss}deg)`;
 
+
         },1000);
+
 
    
     </script>
