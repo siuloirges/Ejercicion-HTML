@@ -5,7 +5,8 @@
 
 footer
 {
-    position: relative;
+    position: absolute;
+    bottom: -100px;
     width: 100%;
     background:#3586ff;
     min-height: 100px;
@@ -14,6 +15,8 @@ footer
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 1;
+    
 }
 
 footer .social-icons,footer .menu

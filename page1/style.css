@@ -47,8 +47,10 @@ body
     inset 0 0 30px rgba(0,0,0,0.1),
      0 20px 20px rgba(0, 0, 0, .2),
      0 0 0 4px rgba(255, 255, 255, 1) ;
+     margin: auto;
      
     transform: scale(.45);
+    z-index: 2;
     
 }
 
