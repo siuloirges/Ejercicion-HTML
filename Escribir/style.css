@@ -8,8 +8,8 @@
     width: 13ch;
     animation: typing 2s steps(13) infinite alternate, blink .5s infinite step-end alternate;
     overflow: hidden;
-    font-size: 20px;
-    color: #1F1F1F;
+    font-size: 30px;
+    color: #fff;
     font-weight: bold;
 }
 
